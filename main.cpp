@@ -47,6 +47,13 @@ void Leggi(char scack[][MAX], int& dim){
     
     file >> dim;
 
+    // Controllo su dim
+    if (dim <= 0 || dim > MAX){
+        cout << "ATTENZIONE! È STATO INSERITO UN VALORE ERRATO NEL NUMERO DELLE RIGHE!\n";
+        system("pause");
+        throw dim;
+    }
+
     for (int i = 0; i < dim; ++i){
         for (int j = 0; j < dim; ++j){
             file >> scack[i][j];
